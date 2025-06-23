@@ -29,6 +29,8 @@ embeddings=OpenAIEmbeddings()
 st.title("Conversational RAG With PDF uplaods and chat history")
 st.write("Upload Pdf's and chat with their content")
 
+if os.path.exists("temp.pdf"):
+    os.remove("temp.pdf")
 
 ##  OPEN AI api key check
 if api_key:
